@@ -1,12 +1,25 @@
-import "./styles.css";
+// import './App.css';
+import "./style.css"
+import Main from "./Main"
+import Content from "./Content";
 
-export default function App() {
+function Create(details){
+  return(
+    <Main
+    key ={details.id}
+    title = {details.title}
+    text = {details.text}
+    />
+  )
+  }
+function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <h1>hello</h1>
+    <div>
+    
+     <span>Emojis</span>
+     {Content.map(Create)}
     </div>
   );
 }
 
+export default App;
